@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header__theme">
+            <span>Dark Mode</span>
+            <input type="checkbox" id="theme" name="theme"/>
+            <label for="theme">Toggle</label>
+        </div>
+    </header>
+    <main>
+        <h1>ForYou</h1>
+        <h3>Youtube Profile Made For You</h3>
+    
+        <button>
+            <img alt="triangle" src="./triangle.svg"/>
+            <span>SIGN IN</span>
+        </button>
+    </main>
+    <script>
+        document.querySelector('input[type="checkbox"]').checked = false;
+        function trans(){
+                document.documentElement.classList.add('transition');
+                window.setTimeout(() => {
+                    document.documentElement.classList.remove('transition')
+                }, 1000)
+            }
+        document.querySelector('input[type="checkbox"]').addEventListener('change', e => {
+          console.log('hey', this, e.target);
+          trans()
+          let theme = e.target.checked ? ['data-theme', 'dark'] : ['data-theme', 'light'];
+          
+          document.documentElement.setAttribute(...theme)
+        })
+    
+        
+      </script>
+</body>
+</html>

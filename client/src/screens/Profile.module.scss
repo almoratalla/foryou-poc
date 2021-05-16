@@ -1,0 +1,124 @@
+//<style>.newst{position:relative;text-align:right;height:420px;width:520px;} #gmap_canvas img{max-width:none!important;background:none!important}</style>
+div.container__profile {
+    display: flex;
+    flex-flow: row nowrap;
+
+
+    div.container__profilecontext {
+        display: flex;
+        flex-flow: column nowrap;
+        right:0;
+        left: 10rem;
+        position: absolute;
+
+        main {
+            // height: 100%;
+            padding: 2rem;
+            // max-height: calc(100vh - 5.6rem);
+            // overflow-y: scroll;
+
+            div.container__profilehero {
+                padding: 0 2rem;
+                text-align: center;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+
+                img {
+                    height: auto;
+                    width: 10rem;
+                    border-radius: 50%;
+                }
+
+                h1 {
+                    font-size: 3.75rem;
+                    font-weight: 600;
+                    color: var(--text-2);
+                }
+
+                ul.container__profilestatistics {
+                    display: flex;
+
+                    li {
+                        margin: 1rem;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        color: var(--text-1);
+
+                        .profilestats__count {
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+            div.container__profilevideos {
+                padding: 2rem 5rem;
+
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin: 2rem 0;
+                    color: var(--text-2);
+                }
+
+                ul.profilevideos__ul {
+                    li {
+                        background: red;
+                        width: 20rem;
+                        height: 10rem;
+                    }
+                }
+
+                span { color: var(--text-1) }
+            }
+
+            div.container__likedvideos {
+                padding: 2rem 5rem;
+                // width: calc(100vw - 10rem);
+                
+
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin: 2rem 0;
+                    color: var(--text-2);
+                }
+
+                ul.profilevideos__ul {
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow-x: scroll;
+
+                    li {
+                        // width: 20rem;
+                        // height: 10rem;
+                        margin: 0 0.5rem;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+
+
+                }
+
+                span { color: var(--text-1) }
+            }
+
+            button.foryou__signout {
+                border: none;
+                height: 3rem;
+                width: 10rem;
+                background: red;
+                color: white;
+                border-radius: 10px;
+                margin-top: 1rem;
+            }
+            
+        }
+    }
+}

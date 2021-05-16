@@ -1,0 +1,2 @@
+### GET OAuth
+GET http://localhost:4010/login

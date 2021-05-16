@@ -1,0 +1,115 @@
+@import '../assets/styles/_variables';
+
+header.login__header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 2rem 5rem;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    
+    div.header__theme {
+        span {
+            color: var(--text-1);
+            font-weight: 600;
+        }
+    
+        input[type=checkbox]{
+            height: 0;
+            width: 0;
+            visibility: hidden;
+            outline: none;
+        }
+        
+        label.toggle__label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 52px;
+            height: 27px;
+            background: hsl(0, 91%, 45%);
+            float: right;
+            border-radius: 100px;
+            position: relative;
+            outline: none;
+        }
+        
+        label:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            width: 20px;
+            height: 20px;
+            background: hsl(0, 0%, 100%);
+            border-radius: 90px;
+            transition: 0.3s;
+            outline:none;
+        }
+        
+        input:checked + label {
+            background: #ccc;
+            outline:none;
+        }
+        
+        input:checked + label:after {
+            right: calc(100% - 3px);
+            transform: translateX(100%);
+            background: hsl(230, 17%, 14%);
+            outline:none;
+        }
+        
+        label:active:after {
+            width: 45px;
+            outline:none;
+        }
+    }
+}
+
+main.login__main {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 2.4375rem;
+        font-weight: 700;
+        color: var(--text-2);
+    }
+    
+    h3 {
+        font-size: 1.8rem;
+        color: var(--text-1);
+    }
+
+    a {
+        background: red;
+        display: flex;
+        width: 10rem;
+        border:none;
+        border-radius: 1.7rem;
+        width: 14rem;
+        height: 5rem;
+        flex-flow: row nowrap;
+        padding: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0px 10rem;
+        cursor:pointer;
+        text-decoration: none;
+
+        img {
+            transform: scale(0.5);
+        }
+
+        span {
+            text-transform: uppercase;
+            color: white;
+            font-weight: 400;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+    }
+}
