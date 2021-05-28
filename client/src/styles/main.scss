@@ -1,0 +1,23 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+	background: var(--bg);
+
+    --bg: hsl(0, 0%, 98%);
+    --bg-alpha: hsl(0, 0%, 100%);
+    --text-1:  #808088;
+    --text-2: #181818;
+	--active: hsl(222, 50%, 96%);
+}
+
+html[data-theme="dark"]{
+	box-sizing: border-box;
+	font-size: 100%;
+	background: var(--bg);
+
+    --bg: hsl(0, 0%, 9%);
+    --bg-alpha: hsl(0, 0%, 13%);
+    --text-1:hsl(228, 34%, 66%);
+    --text-2: hsl(0, 0%, 100%);
+	--active: hsl(228, 29%, 20%);
+}

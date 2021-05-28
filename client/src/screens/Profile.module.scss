@@ -26,12 +26,12 @@ div.container__profile {
 
                 img {
                     height: auto;
-                    width: 10rem;
+                    width: 9.4375rem;
                     border-radius: 50%;
                 }
 
                 h1 {
-                    font-size: 3.75rem;
+                    font-size: 2.8125rem;
                     font-weight: 600;
                     color: var(--text-2);
                 }
@@ -91,8 +91,10 @@ div.container__profile {
 
                     display: flex;
                     flex-flow: row nowrap;
+                    padding: 1rem 0;
                     overflow-x: scroll;
-
+                    
+                    
                     li {
                         // width: 20rem;
                         // height: 10rem;
@@ -101,6 +103,56 @@ div.container__profile {
                         &:first-child {
                             margin-left: 0;
                         }
+
+                        .card__video {
+                            background: var(--active);
+                            border-radius: 20px;
+                            height: inherit;
+                            min-height: 12rem;
+                            min-width: 12rem;
+                            box-shadow: 0px 3px 6px 0 hsla(0, 0%, 0%, 0.13);
+                            display: flex;
+                            flex-flow: column nowrap;
+
+                            img {
+                                border-radius: 20px 20px 0 0;
+                            }
+
+                            .card__info {   
+                                padding: 0.5625rem 1.25rem 0.75rem;
+                                height: 6.7rem;
+                                h5{
+                                    margin: 0.3rem 0 0;
+                                    // color: #606060;
+                                    color: var(--text-2);
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    text-overflow: ellipsis;
+                                    // white-space: nowrap;
+                                    overflow: hidden;
+                                    min-width: 9.375rem;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    height: 2.625rem;
+                                }
+                                span {
+                                    margin-top: 0.5rem;
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    color: var(--text-1);
+
+                                    text-overflow: ellipsis;
+                                    // white-space: nowrap;
+                                    overflow: hidden;
+                                    min-width: 9.375rem;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                }
+                            }
+                        }
+
                     }
 
 

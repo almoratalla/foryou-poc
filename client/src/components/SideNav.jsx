@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 import styles from "./SideNav.module.scss";
 
@@ -26,18 +27,22 @@ const SideNav = () => {
 
     return (
         <nav className={styles.foryou__sidenav}>
-            <a href="/">
+            <Link href="/" className={styles.link__logo}>
                     <img alt="signin" src={triangle}/>
-            </a>
+            </Link>
             <ul className={styles.sidenav__ul}>
-                <li className={`${styles.active} ${styles.sidenav__li}`}>
-                    <img src={navProfile} alt="prof-icon" />
-                    <span>Your channel</span>
-                </li>
-                <li className={styles.sidenav__li}>
-                    <img src={subscriptions} alt="sub-icon" />
-                    <span>Subscriptions</span>
-                </li>
+                <NavLink to="/" className={styles.sidenav__link} activeClassName={styles.sidenav__activelink} exact>
+                    <li className={styles.sidenav__li}>
+                            <img src={navProfile} alt="prof-icon" />
+                            <span>Your channel</span>
+                    </li>
+                </NavLink>
+                <NavLink to="/subscriptions" className={styles.sidenav__link} activeClassName={styles.sidenav__activelink}>
+                    <li className={styles.sidenav__li}>
+                            <img src={subscriptions} alt="sub-icon" />
+                            <span>Subscriptions</span>
+                    </li>
+                </NavLink>
             </ul>
         </nav>
     )

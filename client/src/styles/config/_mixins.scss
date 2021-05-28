@@ -1,0 +1,25 @@
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexMixin($direction){
+    display: flex;
+    flex-flow: $direction nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin theme($light-theme: true){
+    @if $light-theme {
+        background: $rcawct-colors-light-mode-background-vlght-gray;
+        color: $rcawct-colors-light-mode-text-vdrk-blue;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $rcawct-screens-mobile){
+        @content;
+    }
+}
