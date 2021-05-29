@@ -21,7 +21,7 @@ const errorMiddleware : ErrorRequestHandler = (err, req, res, next) => {
       res.json({
         errors: {
           message: err.message,
-          code: err?.original.code,
+          code: err?.code || err?.original.code || '',
           stack: err.stack
         },
       });
@@ -29,7 +29,7 @@ const errorMiddleware : ErrorRequestHandler = (err, req, res, next) => {
       res.json({
         errors: {
           message: err.message,
-          code: err?.original.code || ''
+          code: err?.original.code || err?.code || '',
         },
       });
     }

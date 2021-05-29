@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const YourSubscriptions = () => {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <h3>Subscription</h3>
+        </Fragment>
     )
 }
 
