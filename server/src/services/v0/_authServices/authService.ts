@@ -1,4 +1,5 @@
-import * as OAuth2Data from "../../../utils/secrets/client_secret_dev.json"
+import * as DevOAuth2Data from "../../../utils/secrets/client_secret_dev.json"
+import * as ProdOAuth2Data from "../../../utils/secrets/client_secret.json"
 import { google } from "googleapis";
 import { Credentials, OAuth2Client, GoogleAuth } from "google-auth-library";
 import fetch from "node-fetch";
@@ -6,6 +7,13 @@ declare const Buffer:any;
 const OAuth2 = google.auth.OAuth2;
 
 const SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
+
+let OAuth2Data;
+if(process.env.NODE_ENV === 'production'){
+    OAuth2Data = ProdOAuth2Data;
+} else {
+    OAuth2Data = DevOAuth2Data;
+}
 
 const CLIENT_ID = OAuth2Data.web.client_id;
 const CLIENT_SECRET = OAuth2Data.web.client_secret;
