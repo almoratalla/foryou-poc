@@ -6,6 +6,11 @@ import querystring from "querystring";
 const { AuthService } = authService;
 const stateKey = 'youtube_auth_state';
 
+let host = `http://localhost:3000`
+if(process.env.NODE_ENV === 'PRODUCTION'){
+    host = `https://foryoutube.herokuapp.com`
+}
+
 
 export const authClient = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -33,7 +38,7 @@ export const authCallBack = async (req: Request, res: Response, next: NextFuncti
             res.redirect(`/#${new URLSearchParams({error: 'state_mismatch'})}`);
         } else {
             res.clearCookie(stateKey);
-            res.redirect(`http://localhost:3000/foryou?${querystring.stringify({
+            res.redirect(`${host}/foryou?${querystring.stringify({
                 access_token,
                 refresh_token,
             })}`)
