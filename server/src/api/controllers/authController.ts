@@ -7,7 +7,7 @@ const { AuthService } = authService;
 const stateKey = 'youtube_auth_state';
 
 let host = `http://localhost:3000`
-if(process.env.NODE_ENV === 'PRODUCTION'){
+if(process.env.NODE_ENV === 'production'){
     host = `https://foryoutube.herokuapp.com`
 }
 
