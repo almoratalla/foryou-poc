@@ -1,1 +1,1 @@
-web: node server/dist/app.js
+web: INLINE_RUNTIME_CHUNK=false node server/dist/app.js
