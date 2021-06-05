@@ -25,7 +25,14 @@ export default async ({ app }: { app: express.Application }) => {
     app.use(cors());
     app.use(cookieParser());
     if(process.env.NODE_ENV='production'){
-        app.use(helmet());
+        app.use(helmet({
+            contentSecurityPolicy: {
+                useDefaults: true,
+                directives: {
+                    "default-src": ["self", "https://www.googleapis.com"],
+                }
+            }
+        }));
     }
     app.use(require('method-override')());
     app.use(corsMiddleware);
