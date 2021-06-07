@@ -29,7 +29,11 @@ export default async ({ app }: { app: express.Application }) => {
             contentSecurityPolicy: {
                 useDefaults: true,
                 directives: {
-                    "default-src": ["self", "https://www.googleapis.com"],
+                    "default-src": ["self"],
+                    "connect-src": ["https://www.googleapis.com"],
+                    "child-src": ["self","https://www.googleapis.com"],
+                    "script-src": ["https://www.googleapis.com"],
+                    "style-src":["self"]
                 }
             }
         }));
