@@ -32,7 +32,7 @@ export default async ({ app }: { app: express.Application }) => {
                     "default-src": ["self"],
                     "connect-src": ["https://www.googleapis.com"],
                     "child-src": ["self","https://www.googleapis.com"],
-                    "script-src": ["https://www.googleapis.com"],
+                    "script-src": ["self","https://www.googleapis.com"],
                     "style-src":["self"]
                 }
             }
