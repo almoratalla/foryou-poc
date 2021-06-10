@@ -13,7 +13,8 @@
     "build:server": "cd server && npm run tsc",
     "build:client": "cd client && npm run build",
     "client": "npm start --prefix client",
-    "server": "cd server && nodemon"
+    "server": "cd server && nodemon",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build"
   },
   "author": "",
   "license": "ISC",
