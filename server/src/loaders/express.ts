@@ -31,12 +31,12 @@ export default async ({ app }: { app: express.Application }) => {
                 directives: {
                     "default-src": ["self"],
                     "font-src": ["self", "https://fonts.gstatic.com/"],
-                    "connect-src": ["https://www.googleapis.com/"],
+                    "connect-src": ["self", "https://foryoutube.herokuapp.com/", "https://www.googleapis.com/"],
                     "child-src": ["self", "https://www.googleapis.com/"],
                     "script-src": ["self", "https://foryoutube.herokuapp.com/","https://www.googleapis.com/"],
                     "script-src-elem": ["self", "https://foryoutube.herokuapp.com/","https://www.googleapis.com/"],
-                    "style-src":["self","https://foryoutube.herokuapp.com/"],
-                    "style-src-elem": ["self","https://foryoutube.herokuapp.com/"]
+                    "style-src":["self","https://foryoutube.herokuapp.com/", "https://fonts.googleapis.com/"],
+                    "style-src-elem": ["self","https://foryoutube.herokuapp.com/", "https://fonts.googleapis.com/"]
                 }
             }
         }));
