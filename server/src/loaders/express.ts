@@ -30,12 +30,13 @@ export default async ({ app }: { app: express.Application }) => {
                 useDefaults: true,
                 directives: {
                     "default-src": ["self"],
-                    "connect-src": ["https://www.googleapis.com"],
-                    "child-src": ["self", "https://www.googleapis.com"],
-                    "script-src": ["self", "https://www.googleapis.com"],
-                    "script-src-elem": ["self", "https://www.googleapis.com"],
-                    "style-src":["self"],
-                    "style-src-elem": ["self"]
+                    "font-src": ["self", "https://fonts.gstatic.com/"],
+                    "connect-src": ["https://www.googleapis.com/"],
+                    "child-src": ["self", "https://www.googleapis.com/"],
+                    "script-src": ["self", "https://www.googleapis.com/"],
+                    "script-src-elem": ["self", "https://www.googleapis.com/"],
+                    "style-src":["none"],
+                    "style-src-elem": ["none"]
                 }
             }
         }));
