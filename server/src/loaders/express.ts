@@ -36,7 +36,8 @@ export default async ({ app }: { app: express.Application }) => {
                     "script-src": ["self", "https://foryoutube.herokuapp.com/","https://www.googleapis.com/"],
                     "script-src-elem": ["self", "https://foryoutube.herokuapp.com/","https://www.googleapis.com/"],
                     "style-src":["self","https://foryoutube.herokuapp.com/", "https://fonts.googleapis.com/"],
-                    "style-src-elem": ["self","https://foryoutube.herokuapp.com/", "https://fonts.googleapis.com/"]
+                    "style-src-elem": ["self","https://foryoutube.herokuapp.com/", "https://fonts.googleapis.com/"],
+                    "img-src": ["self", "https://yt3.ggpht.com/", "https://i.ytimg.com/"]
                 }
             }
         }));
