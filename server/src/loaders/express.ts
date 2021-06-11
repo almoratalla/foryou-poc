@@ -35,8 +35,8 @@ export default async ({ app }: { app: express.Application }) => {
                     "child-src": ["self", "https://www.googleapis.com/"],
                     "script-src": ["self", "https://www.googleapis.com/"],
                     "script-src-elem": ["self", "https://www.googleapis.com/"],
-                    "style-src":["none"],
-                    "style-src-elem": ["none"]
+                    "style-src":["self"],
+                    "style-src-elem": ["self"]
                 }
             }
         }));
